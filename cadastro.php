@@ -4,10 +4,11 @@
     <meta charset="utf-8" />
     <title>cadastro</title>
 </head>
-<body>
+<body> 
     <?php
 
     include "includes/connection_start.php";
+    include "includes/verify.php";
     
     ?>
     cadastro
