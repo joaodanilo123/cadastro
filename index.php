@@ -6,6 +6,6 @@
 
 </head>
 <body>
-    <?php echo "<p>Index<p>"; ?>
+    <a href="/cadastro.php">cadastrar</a>
 </body>
 </html>
