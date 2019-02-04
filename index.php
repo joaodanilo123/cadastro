@@ -7,5 +7,6 @@
 </head>
 <body>
     <a href="/cadastro.php">cadastrar</a>
+    <a href="/login">login</a>
 </body>
 </html>
