@@ -1,4 +1,7 @@
+DROP DATABASE cadastro;
 CREATE DATABASE cadastro;
+
+USE cadastro;
 
 CREATE TABLE usuarios(
     nome VARCHAR(255) NOT NULL,
