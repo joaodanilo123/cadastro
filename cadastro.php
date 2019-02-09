@@ -1,3 +1,9 @@
+<?php 
+session_start();
+
+include 'include/connection_start.php';
+echo $_SESSION;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,21 +20,19 @@
     $ok = true;
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-        include 'include/connection_start.php';
-        
+       
         if(empty($_POST["user"])){        
             $user_error = true;
             $ok = false;
             
-        } else {$user = $_POST["user"]; echo "$user";}
+        } else {$user = $_POST["user"];}
 
         if(empty($_POST["email"])){
                 
             $email_error = true;
             $ok = false;
             
-        } else {$email = $_POST["email"]; echo "$email";}
+        } else {$email = $_POST["email"];}
 
         if(empty($_POST["senha"])){
                 
@@ -38,9 +42,19 @@
         } else {$passwd = $_POST["senha"];}
 
         if($ok){
+
+            $connection = mysqli_connect(
+                $_SESSION['server'],
+                $_SESSION['login'],
+                $_SESSION['password'],
+                $_SESSION['db']
+            );
             $query = "INSERT INTO usuarios() VALUES ('$user', '$email', '$passwd')";
-            if(mysqli_query($connection, $query)){
-                echo 'cadastrado com sucesso';
+            $releaseQuery = mysqli_query($connection, $query);
+            if(!$releaseQuery){
+                echo "erro";
+            } else {
+                echo "query ok";
             }
         }
 
