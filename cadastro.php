@@ -1,13 +1,14 @@
 <?php 
 session_start();
 
-include 'include/connection_start.php';
+include 'includes/connection_start.php';
 echo $_SESSION;
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="style/main.css">
     <title>cadastro</title>
 </head>
 <body> 
@@ -61,10 +62,11 @@ echo $_SESSION;
     }
         
     ?>
+    <div class="form">
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
     NOME:<input type="text" name='user'><br>
     EMAIL: <input type="text" name='email'><br>
-    SENHA: <input type="text" name='senha'><br>
+    SENHA: <input type="password" name='senha'><br>
     <input type="submit" value="registrar">
     </form>
     <?php 
@@ -72,5 +74,6 @@ echo $_SESSION;
         echo "<span>erro no cadastro</span>";
     }  
     ?>
+    </div>
 </body>
 </html>

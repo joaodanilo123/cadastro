@@ -1,4 +1,3 @@
-DROP DATABASE cadastro;
 CREATE DATABASE cadastro;
 
 USE cadastro;
