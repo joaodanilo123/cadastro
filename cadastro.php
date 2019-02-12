@@ -2,7 +2,6 @@
 session_start();
 
 include 'includes/connection_start.php';
-echo $_SESSION;
 ?>
 <!DOCTYPE html>
 <html>
@@ -63,10 +62,12 @@ echo $_SESSION;
         
     ?>
     <div class="form">
+    <h2>CADASTRO</h2>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-    NOME:<input type="text" name='user'><br>
-    EMAIL: <input type="text" name='email'><br>
-    SENHA: <input type="password" name='senha'><br>
+    <span>Nome: </span> <br> <input class='ipt' type="text" name='user'>      <br>
+    <span>Email:</span> <br> <input class='ipt' type="text" name='email'>     <br>
+    <span>Senha:</span> <br> <input class='ipt' type="password" name='senha'> <br>
+    Confirme a Senha:<br> <input class='ipt' type="password" name='senha'>    <br>
     <input type="submit" value="registrar">
     </form>
     <?php 

@@ -1,3 +1,17 @@
 body {
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.form {
+    width: 30%;
+    height: 40%;
+    margin-left: 35%;
+    margin-top: 10%;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1%;
+    line-height: 30px;
+}
+div > span {
+    text-align: justify
 }
