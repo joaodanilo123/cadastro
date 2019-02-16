@@ -1,3 +1,4 @@
+
 body {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -12,6 +13,6 @@ body {
     padding: 1%;
     line-height: 30px;
 }
-div > span {
-    text-align: justify
+.ipt {
+    width: 50%;
 }
