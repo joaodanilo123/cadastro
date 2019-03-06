@@ -1,0 +1,73 @@
+* {
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+@media screen and (min-width: 1000px){ 
+ .form{
+        width: 20%;
+        margin-left: 40%;
+        margin-top: 5%;
+        padding: 20px;
+    }
+    
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){ 
+    .form{
+           width: 50%;
+           margin-left: 25%;
+           margin-top: 5%;
+           padding: 20px;
+       }
+       
+   }
+
+
+@media screen and (max-width: 600px){
+span{
+    transition-property: all;
+    transition-duration: 500ms;
+    margin-left: 5%;
+}
+.ipt{
+    margin-left: 0%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    width: 100%;
+}
+}
+
+
+.form{
+    background-color: #bdbcbc
+
+}
+
+.ipt{
+    border: 2px solid white;
+    border-radius: 1%;
+
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+.ipt:focus{
+    border-radius: 5%;
+    box-shadow:  0 4px 8px 0 ;
+    transition-property: all;
+}
+
+.registerBtn {
+    background-color: white;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.registerBtn:hover, .registerBtn:focus{
+    background-color: #62666b;
+    color: white;
+}
+
+
+
