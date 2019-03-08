@@ -1,6 +1,6 @@
-CREATE DATABASE cadastro;
+CREATE DATABASE sistema;
 
-USE cadastro;
+USE sistema;
 
 CREATE TABLE usuarios(
     nome VARCHAR(255) NOT NULL,
