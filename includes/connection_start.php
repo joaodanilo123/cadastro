@@ -1,6 +1,6 @@
 <?php
 
-$_SESSION['server'] = 'localhost';
-$_SESSION['login'] = 'root';
-$_SESSION['password'] = 'joojdanilo01';
-$_SESSION['db'] = 'sistema';
+$server = 'localhost';
+$login = 'root';
+$password = 'joojdanilo01';
+$db= 'sistema';

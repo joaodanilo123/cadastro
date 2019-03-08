@@ -1,8 +1,5 @@
 <?php
-session_start();
 
-include 'includes/connection_start.php';
-include 'includes/email_validator.php';
 include 'includes/register.php';
 
 ?>
@@ -19,7 +16,7 @@ include 'includes/register.php';
 <body>
     <div class="form w3-container w3-card-4 w3-round">
         <h2>SIGN UP</h2>
-        <form action="" method="POST">
+        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="POST">
 
             <span>Username:</span><br>
             <input class='ipt w3-input w3-hover-shadow' type="text" required name='user'><br>

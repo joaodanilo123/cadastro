@@ -1,5 +1,8 @@
 <?php
 
+include 'includes/connection_start.php';
+include 'includes/email_validator.php';
+
 global $user_error, $email_error, $passwd_error, $error;
 global $user, $email, $passwd;
 
@@ -43,12 +46,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($ok) {
 
         $connection = mysqli_connect(
-            $_SESSION['server'],
-            $_SESSION['login'],
-            $_SESSION['password'],
-            $_SESSION['db']
+            $server,
+            $login,
+            $password,
+            $db
         );
-        $query = "INSERT INTO usuarios() VALUES ('$user', '$email', '$passwd')";
+        $query = "INSERT INTO usuarios() VALUES ('$user', '$email', MD5('$passwd'))";
         $releaseQuery = mysqli_query($connection, $query);
         if (!$releaseQuery) {
             echo "não foi possivel realizar o registro";
