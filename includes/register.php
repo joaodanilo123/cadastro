@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             echo "registro completo";
         }
-        mysqli_close();
+        mysqli_close($connection);
         session_abort();
 
     }

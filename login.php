@@ -1,6 +1,7 @@
 <?php
 
-
+include 'includes/connection_start.php';
+include 'includes/loginValidator.php';
 
 ?>
 <!DOCTYPE html>
